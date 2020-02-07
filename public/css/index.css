@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap');
+
+body {
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: block;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.user {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.user.active {
+  display: flex;
+}
+
+.user_wrap {
+  text-align: left;
+  width: 90%;
+  max-width: 500px;
+}
+
+.user_title {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#user_name {
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  font-size: 30px;
+  color: tomato;
+  padding: 5px 10px;
+}
+
+/*webkit瀏覽器專用*/
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+/*Firefox 4-18瀏覽器專用*/
+input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+/*Firefox 19+瀏覽器專用*/
+input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+/*IE10瀏覽器專用*/
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.container.active {
+  display: block;
+}
+
+.container .wrap {
+  width: 90%;
+  max-width: 640px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header {
+  border-bottom: 2px solid #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header_info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header_avatar {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.header_avatar img {
+  width: 100%;
+}
+
+.header_name {
+  font-size: 24px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.header_members {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.numberOfMenbers {
+  color: tomato;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.message {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.message_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.message_item:not(:first-child) {
+  margin-top: 15px;
+}
+
+.message_avatar {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.message_avatar img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.message_title {
+  margin-bottom: 5px;
+}
+
+.message_name {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.message_time {
+  font-size: 10px;
+  margin-top: 10px;
+  color: #999;
+}
+
+.message_text {
+  padding: 4.5px 15px;
+  font-size: 16px;
+  background-color: tomato;
+  border-radius: 5px;
+  color: #fff;
+  max-width: 220px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.message_text span {
+  display: inline-block;
+  line-height: 1.2;
+  vertical-align: 25%;
+}
+
+#send-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#message-input {
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  font-size: 16px;
+  color: tomato;
+  padding: 5px 10px;
+}
+
+#submit_btn {
+  background-color: seagreen;
+  font-size: 16px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#submit_btn:active {
+  opacity: 0.8;
+}

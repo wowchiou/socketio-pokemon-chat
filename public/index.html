@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon-Chat</title>
+    <link
+      type="text/css"
+      href="https://pkq.herokuapp.com/static/Icon/25.png"
+      rel="shortcut icon"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="user active">
+        <form class="user_wrap">
+          <div class="user_title">你的名字?</div>
+          <input
+            type="text"
+            name="user_name"
+            id="user_name"
+            placeholder="請輸入你的名字"
+          />
+        </form>
+      </div>
+      <div class="container">
+        <div class="wrap">
+          <header class="header">
+            <div class="header_info">
+              <div class="header_avatar">
+                <!-- update by js -->
+                <img src="" />
+              </div>
+              <div class="header_name">
+                <!-- update by js -->
+              </div>
+            </div>
+            <div class="header_members">
+              <span class="numberOfMenbers">
+                <!-- update by js --> </span
+              >人在線
+            </div>
+          </header>
+          <ul class="message">
+            <!-- update by js -->
+          </ul>
+          <form id="send-box">
+            <input
+              type="text"
+              name="message"
+              id="message-input"
+              placeholder="你想說啥?"
+            />
+            <input type="submit" id="submit_btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
