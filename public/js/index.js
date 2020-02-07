@@ -2,27 +2,26 @@
   let username = '訪客';
   const socket = io('http://localhost:9000');
 
-  $(function() {
-    $('#send-box').on('submit', function(e) {
-      e.preventDefault();
-      const message = $('#message-input').val();
-      if (message.trim() !== '') {
-        socket.emit('message to server', message);
-        $('#message-input').val('');
-      }
-    });
-  });
-
   socket.on('connect', () => {
-    $('.user_wrap').on('submit', function(e) {
-      e.preventDefault();
-      const userValue = $('#user_name').val();
-      if (userValue.trim() !== '') {
-        username = userValue;
-        switchPage();
-        socket.emit('add user', username);
-        $('.header_name').text(username);
-      }
+    $(function() {
+      $('#send-box').on('submit', function(e) {
+        e.preventDefault();
+        const message = $('#message-input').val();
+        if (message.trim() !== '') {
+          socket.emit('message to server', message);
+          $('#message-input').val('');
+        }
+      });
+      $('.user_wrap').on('submit', function(e) {
+        e.preventDefault();
+        const userValue = $('#user_name').val();
+        if (userValue.trim() !== '') {
+          username = userValue;
+          switchPage();
+          socket.emit('add user', username);
+          $('.header_name').text(username);
+        }
+      });
     });
   });
 
